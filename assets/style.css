@@ -207,3 +207,28 @@ border: 2px silver;
 
 }
 
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: teal;
+    color: #000;
+}
+
+.popup .close:hover {
+    color: tomato;
+}
+.popup .content-1 ,
+.content-2 {
+   max-height: 30%;
+   overflow: auto;
+   text-align: center;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
