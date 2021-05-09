@@ -158,3 +158,18 @@ function unFlipCards () {
 
 }
 
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+}
+
+//cards shuffled into new place //
+
+function shuffle () {
+    cards.forEach(card => {
+    let randomPos = Math.floor(Math.random()  * 12);
+    card.style.order = randomPos;
+    });
+    }
+
+
