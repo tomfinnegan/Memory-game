@@ -188,3 +188,9 @@ function well done () {
 function closeModal () {
     document.getElementById("popup1").classList.remove("show");
 } 
+
+
+function playAgain () {
+    document.getElementById("popup1").classList.remove("show");
+    resetGame ();
+}
