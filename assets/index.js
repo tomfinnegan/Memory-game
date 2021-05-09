@@ -194,3 +194,16 @@ function playAgain () {
     document.getElementById("popup1").classList.remove("show");
     resetGame ();
 }
+
+
+function resetGame () {
+    hasFlippedCard = false;
+    lockBoard = false;
+    firstCard = null;
+    secondCard = null;
+    remainingCards = 12;
+  
+    cards.forEach(card => {
+        card.classList.remove("flip");
+    })
+}
