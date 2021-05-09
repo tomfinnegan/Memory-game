@@ -172,4 +172,15 @@ function shuffle () {
     });
     }
 
+//well done //
 
+function well done () {
+    document.getElementById("popup1") .classList.add("show");
+
+    var starRating = document.querySelector(".stars") .innerHTML;
+    
+    document.getElementById("finalMove").innerHTML = moves;
+    document.getElementById("starRating").innerHTML = starRating
+    document.getElementById("totalTime").innerHTML = minute + "m" + second + "S";
+    
+}
