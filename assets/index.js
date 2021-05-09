@@ -122,3 +122,14 @@ function startTimer () {
         }
     } ,1000);
 }
+
+// check for match / two cards flipped 
+
+function checkforMatch () {
+    if (firstCard.dataset.framework === secondCard.dataset.framework) {
+        disableCards ();
+
+    }else {
+      unFlipCards ();
+    }
+    }
