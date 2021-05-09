@@ -49,3 +49,24 @@ const stars =document.querySelectorAll(".fa-stars");
 let starsList = document.querySelectorAll(".stars li");
 
 
+//start a new game
+document.body.onload = resetGame ();
+
+// card flipping 
+
+function flipcard () {
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classList.add("flip");
+
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        moveCounter ();
+    }else{
+        secondCard = this;
+        checkforMatch ();
+    }
+}
+
