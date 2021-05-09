@@ -131,5 +131,16 @@ function checkforMatch () {
 
     }else {
       unFlipCards ();
+     }
     }
+
+    function disableCards () {
+        remainingCards -=2;
+
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+        resetBoard ();
+        if (remainingCards == 0) {
+            well done ();
+        }
     }
