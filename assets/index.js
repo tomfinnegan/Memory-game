@@ -85,8 +85,40 @@ function moveCounter () {
     if (moves > 8 && moves < 12) {
         for (i = 0; i <3; i++){
             if (i >1) {
-                
+                stars[i].style.visibility = "collapse";
+
             }
         }
     }
+    else if (moves >13) {
+        for (i = 0; i < 3; i++){
+            if (i > 0){
+
+            }
+        }
+    }
+}
+
+// the timer
+
+var second = 0, minute = 0; hour = 0;
+var timer = document.querySelector(".timer");
+var interval;
+function startTimer () {
+    interval = setInterval(function () {
+        if (remainingCards == 0){
+            return;
+
+        }
+        timer.innerHTML = minute + "mins" + second + "secs";
+        second++;
+        if (second == 60) {
+            minute++;
+            second = 0;
+        }
+        if (minute == 60) {
+            hour++;
+            minute = 0;
+        }
+    } ,1000);
 }
