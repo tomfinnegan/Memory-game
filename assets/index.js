@@ -34,5 +34,18 @@ window.onclick = function (event) {
         this.modal.style.display ="none";
     }
 }
+//calling cards from the html page
+const cards = document.querySelectorAll(".memory-card");
+
+let hasFlippedCard;
+let lockBoard;
+let firstCard, secondCard;
+let moves 
+let remainingCards =12;
+let counter= document.querySelectorAll(".moves");
+
+const stars =document.querySelectorAll(".fa-stars");
+
+let starsList = document.querySelectorAll(".stars li");
 
 
