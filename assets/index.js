@@ -182,5 +182,9 @@ function well done () {
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("starRating").innerHTML = starRating
     document.getElementById("totalTime").innerHTML = minute + "m" + second + "S";
-    
+
 }
+
+function closeModal () {
+    document.getElementById("popup1").classList.remove("show");
+} 
