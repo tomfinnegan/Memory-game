@@ -1,116 +1,86 @@
-// Reference w3Schools for the code for modal
-///////////////////////////////////////////////
+const cards = document.querySelectorAll('.memory-card');
 
-
-// Get the modal
-
-var modal = document.getElementById("myModal");
-
-
-// Get the button that opens the modal
-
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-
-btn.onclick = function () {
-    modal.style.display ="block";
-}
-
-// when the user clicks on <span> (x) , close the modal
-
-span.onclick = function () {
-    modal.style.display ="none"; 
-}
-
-// when the user clicks anywhere outside the modal, close it
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        this.modal.style.display ="none";
-    }
-}
-//calling cards from the html page
-const cards = document.querySelectorAll(".memory-card");
 
 let hasFlippedCard;
 let lockBoard;
 let firstCard, secondCard;
-let moves 
-let remainingCards =12;
-let counter= document.querySelectorAll(".moves");
+let moves;
+let remainingCards = 12;
+let counter = document.querySelector(".moves");
 
-const stars =document.querySelectorAll(".fa-stars");
+const stars = document.querySelectorAll(".fa-star");
 
 let starsList = document.querySelectorAll(".stars li");
 
+/** Represents starting of a new game 
+ */
+document.body.onload = resetGame();
 
-//start a new game
-document.body.onload = resetGame ();
+/** Represents Card flipping over
+ flip class is added to memory-card class
+ */
+function flipCard() {
 
-// card flipping 
-
-function flipcard () {
     if (lockBoard) return;
     if (this === firstCard) return;
 
-    this.classList.add("flip");
-
+    this.classList.add('flip');
+    /** first click 
+    */
     if (!hasFlippedCard) {
         hasFlippedCard = true;
         firstCard = this;
-        moveCounter ();
-    }else{
+        moveCounter();
+    } else {
+        /** second click 
+        */
         secondCard = this;
-        checkforMatch ();
+        checkForMatch();
+
     }
 }
-
-// move counter timer
-
-function moveCounter () {
+/**  Represents Move Counter, Timer & Stars
+ */
+function moveCounter() {
     moves++;
     counter.innerHTML = moves;
-
-    if (moves ==1){
+    /** start timer on first click
+    */
+    if (moves == 1) {
         second = 0;
         minute = 0;
         hour = 0;
         startTimer();
     }
+    /** setting rates based on moves
+    */
     if (moves > 8 && moves < 12) {
-        for (i = 0; i <3; i++){
-            if (i >1) {
+        for (i = 0; i < 3; i++) {
+            if (i > 1) {
                 stars[i].style.visibility = "collapse";
-
             }
         }
     }
-    else if (moves >13) {
-        for (i = 0; i < 3; i++){
-            if (i > 0){
-
+    else if (moves > 13) {
+        for (i = 0; i < 3; i++) {
+            if (i > 0) {
+                stars[i].style.visibility = "collapse";
             }
         }
     }
 }
 
-// the timer
-
+/** Represents timer/clock 
+*/
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
-function startTimer () {
+function startTimer() {
     interval = setInterval(function () {
-        if (remainingCards == 0){
+        if (remainingCards == 0) {
             return;
-
         }
-        timer.innerHTML = minute + "mins" + second + "secs";
+        timer.innerHTML = minute + "mins " + second + "secs";
         second++;
         if (second == 60) {
             minute++;
@@ -120,90 +90,169 @@ function startTimer () {
             hour++;
             minute = 0;
         }
-    } ,1000);
+    }, 1000);
 }
 
-// check for match / two cards flipped 
+/** Represents two cards flipped over
+Checks for matching pairs 
+if theres no match unflipCards is called
+*/
 
-function checkforMatch () {
+function checkForMatch() {
+    // do cards march?
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
-        disableCards ();
 
-    }else {
-      unFlipCards ();
-     }
+        disableCards();
+
+
+    } else {
+        unFlipCards();
     }
+}
 
-    function disableCards () {
-        remainingCards -=2;
+/**  Represents the matched cards
+ makes them unclickable
+*/
 
-        firstCard.removeEventListener("click", flipCard);
-        secondCard.removeEventListener("click", flipCard);
-        resetBoard ();
-        if (remainingCards == 0) {
-            well done ();
-        }
+function disableCards() {
+    remainingCards -= 2;
+    /** its a match
+    */
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+    /** cards cant be flipped back upon clicking
+    */
+    resetBoard();
+    if (remainingCards == 0) {
+        congratulations();
     }
-//cards that don't match//
+}
 
-function unFlipCards () {
+/** Represents the cards that dont match 
+*/
+function unFlipCards() {
+
     lockBoard = true;
 
-    setTimeout (() => {
-        firstCard.classList.remove("flip");
-        secondCard.classList.remove("flip");
-        
-        resetBoard() ;
-    } , 1500) ;
+    /** not a match
+    */
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
 
+        resetBoard();
+    }, 1500);
 }
-
+/** Allows the condition above to work by setting 
+ firstCard and secondCard to nulls
+*/
 function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
+
 }
-
-//cards shuffled into new place //
-
-function shuffle () {
+/** Represents the cards being shuffled into new postions
+ */
+function shuffle() {
     cards.forEach(card => {
-    let randomPos = Math.floor(Math.random()  * 12);
-    card.style.order = randomPos;
+        let randomPos = Math.floor(Math.random() * 12);
+        card.style.order = randomPos;
     });
-    }
+}
+/** Represents Congratulations modal once all cards are matched 
+*/
+function congratulations() {
+    /** show congratulations modal
+    */
+    document.getElementById("popup1").classList.add("show");
 
-//well done //
+    /** declare star rating variable
+    */
+    var starRating = document.querySelector(".stars").innerHTML;
 
-function well done () {
-    document.getElementById("popup1") .classList.add("show");
-
-    var starRating = document.querySelector(".stars") .innerHTML;
-    
+    /** showing move, rating, time on modal
+    */
     document.getElementById("finalMove").innerHTML = moves;
-    document.getElementById("starRating").innerHTML = starRating
-    document.getElementById("totalTime").innerHTML = minute + "m" + second + "S";
-
+    document.getElementById("starRating").innerHTML = starRating;
+    document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
 }
 
-function closeModal () {
+/** close icon on modal
+* marked by an 'x'
+*/
+function closeModal() {
     document.getElementById("popup1").classList.remove("show");
-} 
-
-
-function playAgain () {
-    document.getElementById("popup1").classList.remove("show");
-    resetGame ();
 }
 
 
-function resetGame () {
+/**  for user to play Again 
+*/
+function playAgain() {
+    document.getElementById("popup1").classList.remove("show");
+    resetGame();
+}
+
+/** Represents the game starting again and everything being reset
+ */
+function resetGame() {
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
     remainingCards = 12;
-  
+    /** reset Cards
+    */
     cards.forEach(card => {
-        card.classList.remove("flip");
+        card.classList.remove('flip');
     })
+
+    /** shuffle Cards
+    */
+
+    shuffle();
+
+    /** reset moves
+    */
+    moves = 0;
+    counter.innerHTML = moves;
+    /** reset rating
+    */
+    for (var i = 0; i < stars.length; i++) {
+        stars[i].style.color = "#FFD700";
+        stars[i].style.visibility = "visible";
+    }
+    /** reset timer
+    */
+    second = 0;
+    minute = 0;
+    hour = 0;
+    var timer = document.querySelector(".timer");
+    timer.innerHTML = "0 mins 0 secs";
+    clearInterval(interval);
+    cards.forEach(card => card.addEventListener('click', flipCard));
+}
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
