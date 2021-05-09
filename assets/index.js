@@ -144,3 +144,17 @@ function checkforMatch () {
             well done ();
         }
     }
+//cards that don't match//
+
+function unFlipCards () {
+    lockBoard = true;
+
+    setTimeout (() => {
+        firstCard.classList.remove("flip");
+        secondCard.classList.remove("flip");
+        
+        resetBoard() ;
+    } , 1500) ;
+
+}
+
