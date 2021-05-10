@@ -119,3 +119,36 @@ balsamiq:
  <h2>Further Testing </h2>
  The website was tested on google chrome,edge & internet explorer
   It was tested on a variety of devices such as desktop tablet.
+
+<h2>Making a Local Clone</h2>
+1.log into github and locate the github repository
+
+2.under the repository name,click clone or download.
+
+3 to clone the repository using HTTPS,under &nbsp;"clone with HTTPS" ,copy the link
+
+4 open git bash
+
+5 change the current working directory to the location where you want the cloned
+  directory to be made.
+
+  6 type git clone, and then paste the URL 
+
+<H2>Credits</H2>
+
+
+code :
+
+https://marina-ferreira.github.io/projects/js/memory-game/
+ and youtube tutorials
+
+
+
+<h2>Media</h2>
+All images were sourced from google
+
+<h2>Acknowledgements</h2>
+thank you to my mentor for pointing thing out that were wrong
+w3 Schools
+
+Bootstrap 
