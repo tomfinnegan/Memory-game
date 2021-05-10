@@ -123,7 +123,18 @@ balsamiq:
 
 <h2>Deployment</h2>
 
+1 log into GitHub and locate the GitHub repository
 
+2 at the top of the respository locate the settings button on the menu
+
+3 scroll down the settings page until you locate the "Github Pages" section. 
+
+4 under "source" click the dropdown called "None" then "select the master branch"
+
+5 the page will automatically refresh.
+
+6 Scroll back down through the page to locate the now published site link in the
+"GitHub Pages" Section
 
 
 
