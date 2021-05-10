@@ -64,7 +64,7 @@ interactive elements
 
 <h2>Technology Used</h2>
 
-<h3>Languages used</h3>
+Languages used
 
 HTML 5
 
@@ -74,13 +74,48 @@ JAVASCRIPT
 
 <h2>Frameworks,Libraries and programs Used</h2>
 
-<h3>Bootstrap v 4.5.3</h3>
+Bootstrap v 4.5.3
 this is used to assit with the responsiveness and styling of the website
 
-<h2>Google Fonts</h2>
+Google Fonts
   google fonts is used to style the headings and text 
 
   font awesome was used on the webpage to add icons to the webpage for aesthetic and ux purpose
 
 Git
    Git is used for version control. its also used to commit and push to github.  
+
+GitHub
+   GitHub is used to store the project code after being pushed from Git.
+
+balsamiq:
+   Balsamiq was used to create wireframes during the desgin process   
+
+  <h2>Testing</h2>
+
+  The W3C Markup Validator and W3C CSS Validator were used to validate every page of the project 
+  to insure there are no errors or bugs in the project
+  W3C Markup Validator 
+  [results](https://github.com/Code-Institute-Solutions/SampleREADM)
+
+  <h2>Testing User Stories from User Experience (UX) Section</h2>
+
+  First Time Visitor Goals: 
+
+  on entering the website the users are greeted with title Countries Memory Game
+  there is buttons for information on how to play the game there is 
+  also a button to reset the game whenever you want to do Solutions
+  below there is 12 cards with globe images on them (backfacing) whenever when
+  you click the first card the timer starts and the card counter goes up
+
+<h2>Returning Visitor Goals</h2>
+
+  To try to get a better score than the last time
+
+  when the game has finished a modal will display showing how the users time and
+  move counter along with there stars rating also there is a playagain button that allows
+  the user to restart and try to get the best possible score in the least amount of time
+
+ <h2>Further Testing </h2>
+ The website was tested on google chrome,edge & internet explorer
+  It was tested on a variety of devices such as desktop tablet.
