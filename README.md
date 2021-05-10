@@ -75,6 +75,12 @@ JAVASCRIPT
 <h2>Frameworks,Libraries and programs Used</h2>
 
 <h3>Bootstrap v 4.5.3</h3>
-this is used to create a modal for information and responsive styling of the webiste
+this is used to assit with the responsiveness and styling of the website
 
 <h2>Google Fonts</h2>
+  google fonts is used to style the headings and text 
+
+  font awesome was used on the webpage to add icons to the webpage for aesthetic and ux purpose
+
+Git
+   Git is used for version control. its also used to commit and push to github.  
