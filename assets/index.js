@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.memory-card');
+let cards = document.querySelectorAll('.memory-card');
 
 
 let hasFlippedCard;
@@ -8,7 +8,7 @@ let moves;
 let remainingCards = 12;
 let counter = document.querySelector(".moves");
 
-const stars = document.querySelectorAll(".fa-star");
+let stars = document.querySelectorAll(".fa-star");
 
 let starsList = document.querySelectorAll(".stars li");
 
