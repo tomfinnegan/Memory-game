@@ -120,6 +120,13 @@ balsamiq:
  The website was tested on google chrome,edge & internet explorer
   It was tested on a variety of devices such as desktop tablet.
 
+
+<h2>Deployment</h2>
+
+
+
+
+
 <h2>Making a Local Clone</h2>
 1.log into github and locate the github repository
 
