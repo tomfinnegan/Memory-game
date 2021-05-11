@@ -123,6 +123,8 @@ balsamiq:
 
 <h2>Deployment</h2>
 
+GitHub Pages
+
 1 log into GitHub and locate the GitHub repository
 
 2 at the top of the respository locate the settings button on the menu
@@ -160,13 +162,17 @@ code :
 https://marina-ferreira.github.io/projects/js/memory-game/
  and youtube tutorials
 
+<h2>Content</h2>
+all content was written by the developer
+
 
 
 <h2>Media</h2>
 All images were sourced from google
 
 <h2>Acknowledgements</h2>
-thank you to my mentor for pointing thing out that were wrong
-w3 Schools
+thank you to my mentor for pointing things out that were wrong 
+and adding different features to make the site stand out from the crowd. 
+W3 Schools
 
 Bootstrap 
