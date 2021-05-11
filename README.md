@@ -37,13 +37,13 @@
 
 <h2>Imagery</h2>
  
- imagery is important as the main purpose of the game.
+ imagery is important as the main purpose of the game site.
  users can engage with the website better if they have images 
- to look at i choose a countires of the world memory game 
-  is card matching
-  I used countries of the world for the user to try to match the cards. 
-  i  choose countries of the world as a memory card game because its 
-  different 
+ to look at. i choose countires of the world  card matching
+ memory game. I used countries of the world because people 
+ can look a the maps of the different counties and try to 
+ remember where they are on the game 
+
 
 
 <h1>balsamiq:</h1>
@@ -71,8 +71,7 @@ JAVASCRIPT
 Bootstrap v 4.5.3
 this is used to assit with the responsiveness and styling of the website
 
-Google Fonts
-  google fonts is used to style the headings and text 
+FontAwesome 
 
   font awesome was used on the webpage to add icons to the webpage for aesthetic and ux purpose
 
@@ -90,7 +89,7 @@ balsamiq:
   The W3C Markup Validator and W3C CSS Validator were used to validate every page of the project 
   to insure there are no errors or bugs in the project
   W3C Markup Validator 
-  [results](https://github.com/Code-Institute-Solutions/SampleREADM)
+  [results] can be found in the image folder 
 
   <h2>Testing User Stories from User Experience (UX) Section</h2>
 
@@ -98,9 +97,10 @@ balsamiq:
 
   on entering the website the users are greeted with title Countries Memory Game
   there is buttons for information on how to play the game there is 
-  also a button to reset the game whenever you want to do Solutions
-  below there is 12 cards with globe images on them (backfacing) whenever when
+  also a button to reset the game whenever you want to do so
+  below there is 12 cards with globe images on them (backfacing) whenever 
   you click the first card the timer starts and the card counter goes up
+  the counter stops when all cards are matched
 
 <h2>Returning Visitor Goals</h2>
 
@@ -168,5 +168,4 @@ All images were sourced from google
 thank you to my mentor for pointing things out that were wrong 
 and adding different features to make the site stand out from the crowd. 
 W3 Schools
-
 Bootstrap 
