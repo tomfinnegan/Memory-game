@@ -33,15 +33,7 @@
 
 
 
-<h2>Typography</h2>
 
-<p style="color:red;">Tangerine</p>
-the main font is Tangerine
- </p>
- Tangerine is a calligraphy font inspired by many italic chancery hands from the 16-17th century. Its tall ascender, the most distinct characteristic of this type, takes a wide line space between lines and gives it a graceful texture. It is generally advisable to use Tangerine for a title or short text at large size because of the short height of lowercase letters. Tangerine is produced by Japanese type designer Toshi Omagari and was named after a woman who encouraged him to begin this work.
-
-<p style="color:red;">serif</p>
-serifs are the small lines or strokes at the ends of the main strokes of the letters in a particular font. Sometimes, serifs are also descriptively explained as “hooks” or “little feet” at the ends of the vertical and horizontal strokes of a letter. Consequently, fonts with serifs are usually mentioned as Serif fonts, for example, Times Roman, Garamond, Souvenir, etc. 
 
 [link for reference of Tangerine](https://www.1001fonts.com/tangerine-font.html)
 
