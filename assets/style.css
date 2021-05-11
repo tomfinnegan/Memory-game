@@ -64,7 +64,7 @@ img {
 
 .timer {
     display: inline-block;
-    margin: 0 2 rem;
+    margin: 0 1 rem;
 }
 
 /* The modal (background) */
@@ -94,11 +94,10 @@ img {
     padding: 0;
     border: 1px solid #888;
     width: 80%;   
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-
+     -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 
