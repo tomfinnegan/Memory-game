@@ -4,13 +4,15 @@
 
 [live site](https://tomfinnegan.github.io/Memory-game/)
 
-<P>This is a webiste to test you memory on countries of the world.it's desgined to be responsible and accesible on a range of devices making it easy to navigate</P>
+<P>This is a website to test your memory on countries of the world it's desgined to be responsible and accesible on a range of devices making it easy to navigate
+   and understand
+</P>
 
 <img src="images/newmemorgame.PNG" alt="memory game">
 
 <h1>User Experience (UX)</h1>
 
->
+
   <h2>User Stories</h2>
 
    First Time visitor Goals 
@@ -21,27 +23,27 @@
 
   <h2>Returning Visitor Goals</h2>
   
-    a.As a Returning visitor i want to find get a better score than the first time 
+    a.As a Returning visitor i want to  get a better score than the first time 
+
+    b.As a Returning Visitor i want to complete the game in the quickest time possible     
    
   <h2>Desgin</h2>
 
   Color Scheme:
 
   The main color is white for the background the color of the text is red for the header ,moves and timer the stars are a yellow
+  the reason i chose white is because i didn't want the players of the game to be distracted by the background color
 
-
-
-
-
-
-
-[link for reference of Tangerine](https://www.1001fonts.com/tangerine-font.html)
 
 <h2>Imagery</h2>
  
- imagery is important as the main purpose of the game is card matching
-  I used countries of the world for the user to try to match. this is 
-  why i choose countries of the world as a memory card game 
+ imagery is important as the main purpose of the game.
+ users can engage with the website better if they have images 
+ to look at i choose a countires of the world memory game 
+  is card matching
+  I used countries of the world for the user to try to match the cards. 
+  i  choose countries of the world as a memory card game because its 
+  different 
 
 
 <h1>balsamiq:</h1>
