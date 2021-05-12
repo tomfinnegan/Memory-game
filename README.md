@@ -8,7 +8,7 @@
    and understand
 </P>
 
-<img src="images/newmemorgame.PNG" alt="memory game">
+<img src="assets/images/newmemorgame.PNG" alt="memory game">
 
 <h1>User Experience (UX)</h1>
 

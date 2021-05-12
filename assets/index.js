@@ -1,86 +1,77 @@
 let cards = document.querySelectorAll('.memory-card');
 
-
 let hasFlippedCard;
 let lockBoard;
 let firstCard, secondCard;
 let moves;
-let remainingCards = 12;
+let remaningCards = 12;
 let counter = document.querySelector(".moves");
 
-let stars = document.querySelectorAll(".fa-star");
+let stars =document.querySelectorAll(".fa-star");
 
-let starsList = document.querySelectorAll(".stars li");
+let starsList =document.querySelectorAll(".stars.li");
 
-/** Represents starting of a new game 
- */
+/**starts the new game*/
+
 document.body.onload = resetGame();
 
-/** Represents Card flipping over
- flip class is added to memory-card class
- */
-function flipCard() {
+/** card flipping over */
+ function flipCard () {
 
-    if (lockBoard) return;
-    if (this === firstCard) return;
+     if (lockBoard ) return;
+     if (this === firstCard ) return;
 
-    this.classList.add('flip');
-    /** first click 
-    */
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        firstCard = this;
-        moveCounter();
-    } else {
-        /** second click 
-        */
-        secondCard = this;
-        checkForMatch();
+     this.classList.add('flip');
 
-    }
-}
-/**  Represents Move Counter, Timer & Stars
- */
-function moveCounter() {
+     if (!hasFlippedCard) {
+         hasFlippedCard = true;
+         firstCard = this;
+         moveCounter ();
+
+     } else {
+         secondCard = this;
+         checkForMatch ();
+     }
+ }
+
+/** Move counter, Timer and Stars */
+
+function moveCounter () {
     moves++;
     counter.innerHTML = moves;
-    /** start timer on first click
-    */
-    if (moves == 1) {
+
+    if (moves == 1){
         second = 0;
         minute = 0;
         hour = 0;
         startTimer();
     }
-    /** setting rates based on moves
-    */
     if (moves > 8 && moves < 12) {
-        for (i = 0; i < 3; i++) {
-            if (i > 1) {
-                stars[i].style.visibility = "collapse";
-            }
-        }
-    }
-    else if (moves > 13) {
-        for (i = 0; i < 3; i++) {
-            if (i > 0) {
-                stars[i].style.visibility = "collapse";
-            }
+        for (i = 0; < 3; i++ )
+        if (i > 1) {
+             stars[i].style.visibility = "collapse";
         }
     }
 }
+else if (moves > 13) {
+    for(i = 0; < 3; i++) {
+        if (i > 1) {
+            stars[i].style.visibility ="collapse";
+        }
+    }
+}
+}
+/**timer/clock */
 
-/** Represents timer/clock 
-*/
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
-function startTimer() {
-    interval = setInterval(function () {
-        if (remainingCards == 0) {
+function startTimer (){
+    interval = setInterval (function () {
+        if (remaningCards == 0) {
             return;
         }
-        timer.innerHTML = minute + "mins " + second + "secs";
+        timer.innerHTML = minute + "mins" + second + "secs";
         second++;
         if (second == 60) {
             minute++;
@@ -93,49 +84,34 @@ function startTimer() {
     }, 1000);
 }
 
-/** Represents two cards flipped over
-Checks for matching pairs 
-if theres no match unflipCards is called
-*/
-
-function checkForMatch() {
-    // do cards march?
+/** check matched cards */
+function checkForMatch () {
     if (firstCard.dataset.framework === secondCard.dataset.framework) {
 
-        disableCards();
+    disableCards ();
 
-
-    } else {
-        unFlipCards();
-    }
+} else {
+    unflipCards();
+  }
 }
 
-/**  Represents the matched cards
- makes them unclickable
-*/
-
+/**matched cards unclickable*/
 function disableCards() {
-    remainingCards -= 2;
-    /** its a match
-    */
-    firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    /** cards cant be flipped back upon clicking
-    */
+    remaningCards -=2;
+    firstCard.removeEventListener('click' , flipCard);
+    secondCard.removeEventListener('click' ,flipCard);
+
     resetBoard();
-    if (remainingCards == 0) {
-        congratulations();
+    if (remaningCards == 0) {
+        Well Done ();
     }
 }
 
-/** Represents the cards that dont match 
-*/
-function unFlipCards() {
+/**cards the do not match */
 
+function unflipCards () {
     lockBoard = true;
 
-    /** not a match
-    */
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
@@ -143,94 +119,74 @@ function unFlipCards() {
         resetBoard();
     }, 1500);
 }
-/** Allows the condition above to work by setting 
- firstCard and secondCard to nulls
-*/
-function resetBoard() {
+
+function resetBoard () {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
-
 }
-/** Represents the cards being shuffled into new postions
- */
-function shuffle() {
-    cards.forEach(card => {
+
+function shuffle () {
+  cards.forEach(card =>) {
         let randomPos = Math.floor(Math.random() * 12);
-        card.style.order = randomPos;
+        card.style.order =  randomPos;
     });
 }
-/** Represents Congratulations modal once all cards are matched 
-*/
-function congratulations() {
-    /** show congratulations modal
-    */
+
+/**well Done */
+
+function well Done () {
     document.getElementById("popup1").classList.add("show");
+} 
+var starRating = document.querySelector(".stars").innerHTML;
 
-    /** declare star rating variable
-    */
-    var starRating = document.querySelector(".stars").innerHTML;
-
-    /** showing move, rating, time on modal
-    */
-    document.getElementById("finalMove").innerHTML = moves;
-    document.getElementById("starRating").innerHTML = starRating;
-    document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
+document.getElementById("finalMove").innerHTML = moves;
+document.getElementById("starRating").innerHTML = starRating;
+document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";  
 }
 
-/** close icon on modal
-* marked by an 'x'
-*/
-function closeModal() {
+/**close the well done modal */
+
+function closeModal () {
     document.getElementById("popup1").classList.remove("show");
 }
 
-
-/**  for user to play Again 
-*/
-function playAgain() {
+function playAgain () {
     document.getElementById("popup1").classList.remove("show");
-    resetGame();
+    resetGame(); 
 }
 
-/** Represents the game starting again and everything being reset
- */
-function resetGame() {
+/**reset everything new game starting */
+
+function resetGame () {
     hasFlippedCard = false;
     lockBoard = false;
     firstCard = null;
     secondCard = null;
-    remainingCards = 12;
-    /** reset Cards
-    */
-    cards.forEach(card => {
-        card.classList.remove('flip');
-    })
+    remaningCards = 12;
+    
+    cards.forEach(card =>)
+    card.classList.remove("flip");
+})
 
-    /** shuffle Cards
-    */
+shuffle ();
 
-    shuffle();
+moves = 0;
+counter.innerHTML = moves;
 
-    /** reset moves
-    */
-    moves = 0;
-    counter.innerHTML = moves;
-    /** reset rating
-    */
-    for (var i = 0; i < stars.length; i++) {
-        stars[i].style.color = "#FFD700";
-        stars[i].style.visibility = "visible";
-    }
-    /** reset timer
-    */
-    second = 0;
-    minute = 0;
-    hour = 0;
-    var timer = document.querySelector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
-    clearInterval(interval);
-    cards.forEach(card => card.addEventListener('click', flipCard));
+for (var i = 0; i < stars.length; i++){
+    stars[i].style.color = "";
+    stars[i].style.visibility = "visible";
 }
+
+second = 0;
+minute = 0;
+hour = 0;
+var timer  = document.querySelector("timer");
+timer.innerHTML = "0 mins 0 secs";
+clearInterval(interval);
+cards.forEach(card => card.addEventListener('click' , flipCard));
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
