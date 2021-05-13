@@ -26,3 +26,48 @@ window.onclick = function(event) {
   }
 }
 
+
+const cards = document.querySelectorAll('.memory-card');
+
+let hasFlippedCard;
+let lockBoard;
+let firstCard, secondCard;
+let moves;
+let remainingCards = 12;
+let counter = document.querySelector(".moves");
+
+const stars = document.querySelectorAll(".fa-star");
+
+let starsList = document.querySelectorAll(".stars li");
+
+/** Starts a new game */
+
+document.body.onload = resetGame();
+
+
+function flipCard() {
+
+    if (lockBoard) return;
+    if (this === firstCard) return;
+
+    this.classlist.add('flip');
+
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+        moveCounter();
+
+    } else {
+
+        secondCard = this;
+        checkForMatch();
+    }
+
+    if (moves > 8 && moves < 12) {
+        for (i = 0; i < 3; i++) {
+         if (i > i) {
+             stars[i].style.visibility = "collapse";
+         }
+        }
+    }
+}
