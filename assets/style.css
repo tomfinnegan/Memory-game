@@ -16,6 +16,10 @@ body {
     
 }
 
+404.html {
+    text:red;
+}
+
 h1 {
     display: flex;
 }
