@@ -16,9 +16,6 @@ body {
     
 }
 
-404.html {
-    text:red;
-}
 
 h1 {
     display: flex;
@@ -68,7 +65,7 @@ img {
 
 .timer {
     display: inline-block;
-    margin: 0 1 rem;
+    margin:  1px;
 }
 
 /* The modal (background) */
@@ -178,7 +175,7 @@ img {
 /*cards*/
 .memory-card {
     width: calc(25% - 10px);
-    height: calc(33.333% -10px);
+    height: calc(33.333% - 10px);
     margin: 5px;
     position: relative;
     transform: scale(1);
