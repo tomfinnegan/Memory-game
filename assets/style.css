@@ -1,4 +1,6 @@
-
+body {
+  font-family: Verdana, sans-serif;
+}
 
 
 * {
@@ -19,6 +21,7 @@ body {
 
 h1 {
     display: flex;
+    
 }
 
 
@@ -26,9 +29,14 @@ img {
     width: 100px;
 }
 
+.navbar {
+    font-size: 40px;
+}
+
+
 /*container and heading*/
 .container {
-	width: 100%;
+    width: 100%;    
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -82,7 +90,6 @@ img {
     overflow: auto;
  
     
-
 }
 
 /*modal  content*/
@@ -294,12 +301,18 @@ img {
         height: 50%;
     } 
     .container{
-        font-size: smaller;
+        font-size: smaller;      
+        
+    }
+   
     }
     header {
         text-align: center;
     }
     h1 {
         font-size: 1rem;
+        text-align: center;
     }
+    
 }
+

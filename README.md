@@ -31,8 +31,8 @@
 
   Color Scheme:
 
-  The main color is white for the background the color of the text is red for the header ,moves and timer the stars are a yellow
-  the reason i chose white is because i didn't want the players of the game to be distracted by the background color
+  The main color is white for the background the color of the text is red for the header ,moves and timer the stars are a green
+  the reason i chose white is because i didn't want the players of the game to be distracted by the background color 
 
 
 <h2>Imagery</h2>
@@ -167,5 +167,5 @@ All images were sourced from google
 <h2>Acknowledgements</h2>
 thank you to my mentor for pointing things out that were wrong 
 and adding different features to make the site stand out from the crowd. 
-W3 Schools
-Bootstrap 
+W3 Schools for information on the info modal
+Bootstrap for the button's
