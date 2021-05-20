@@ -1,6 +1,7 @@
 
 
-<h1 style="text-align: center">Countries Memory Game</h1>
+<h1 align= "center">Countries Memory Game</h1>
+
 
 [live site](https://tomfinnegan.github.io/Memory-game/)
 
@@ -10,32 +11,32 @@
 
 <img src="assets/images/newmemorgame.PNG" alt="memory game">
 
-<h1>User Experience (UX)</h1>
+## User Experience (UX)
 
 
-  <h2>User Stories</h2>
+  ## User Stories
 
-   First Time visitor Goals 
+   ### First Time visitor Goals 
 
-   a. As a First Time Visitor i want to easily understand  how to play the game  
-   b. As a First Time Visitor i want to see how i'm getting on as the game is in progress 
+   1. As a First Time Visitor i want to easily understand  how to play the game  
+   2. As a First Time Visitor i want to see how i'm getting on as the game is in progress 
 
 
-  <h2>Returning Visitor Goals</h2>
+  ### Returning Visitor Goals
   
-    a.As a Returning visitor i want to  get a better score than the first time 
+    1.As a Returning visitor i want to  get a better score than the first time 
 
-    b.As a Returning Visitor i want to complete the game in the quickest time possible     
+    2.As a Returning Visitor i want to complete the game in the quickest time possible     
    
-  <h2>Desgin</h2>
+  ### Desgin
 
-  Color Scheme:
+  ### Color Scheme
 
   The main color is white for the background the color of the text is red for the header ,moves and timer the stars are a green
   the reason i chose white is because i didn't want the players of the game to be distracted by the background color 
 
 
-<h2>Imagery</h2>
+### Imagery
  
  imagery is important as the main purpose of the game site.
  users can engage with the website better if they have images 
@@ -46,27 +47,28 @@
 
 
 
-<h1>balsamiq:</h1>
+### balsamiq
 
  desktop/moblie wireframe - [balsmaq wireframe](https://balsamiq.cloud/spx8hwa/pqxt7gg/r2278)
 
-<h2>Features</h2>
+### Features
 
 responsive on all devices
 
 interactive elements
 
-<h2>Technology Used</h2>
+### Technology Used
 
 Languages used
 
-HTML 5
+[HTML 5](https://en.wikipedia.org/wiki/HTML5)
 
-CSS
+[CSS](https://en.wikipedia.org/wiki/CSS)
 
-JAVASCRIPT
+[JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
+[Bootstrap](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)
 
-<h2>Frameworks,Libraries and programs Used</h2>
+### Frameworks,Libraries and programs Used
 
 Bootstrap v 4.5.3
 this is used to assit with the responsiveness and styling of the website
