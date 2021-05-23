@@ -110,7 +110,7 @@ this is used to assit with the responsiveness and styling of the website
   and the game is over you can play as many time in an effort to get a better time.
 
 
- 
+
  ### Further Testing 
  The website was tested on google chrome,edge & internet explorer
   It was tested on a variety of devices such as desktop tablet.
