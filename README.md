@@ -9,7 +9,7 @@
    and understand
 </P>
 
-<img src="assets/images/newmemorgame.PNG" alt="memory game">
+<img src="images/newmemorgame.PNG" alt="memory game">
 
 ## User Experience (UX)
 
@@ -31,7 +31,7 @@
  
    
   ### Desgin
-     ### Color Scheme
+      Color Scheme
 
   The main color is white for the background the color of the text is red for the header ,moves and timer  
   the reason i chose white is because i didn't want the players of the game to be distracted by the background color 
