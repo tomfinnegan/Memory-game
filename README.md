@@ -97,7 +97,7 @@ this is used to assit with the responsiveness and styling of the website
    [images can be found here](https://github.com/tomfinnegan/Memory-game/tree/master/images)  
 
 
-   ### known errors
+   ### known Errors
    The clock is not in sync with the modal clock when its displayed at the end of the game.
    there is a one  second time discrepancy on the maodal displayed upon finishing the game.
 
