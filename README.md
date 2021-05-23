@@ -94,7 +94,7 @@ this is used to assit with the responsiveness and styling of the website
   The W3C Markup Validator and W3C CSS Validator were used to validate every page of the project 
   to insure there are no errors or bugs in the project
   W3C Markup Validator 
-  [results] can be found in the image folder 
+   [images can be found here](https://github.com/tomfinnegan/Memory-game/tree/master/images)  
 
   ### Testing User Stories from User Experience (UX) Section
 
@@ -150,8 +150,9 @@ The project was deployed  to GitHub in the following steps...
 5 change the current working directory to the location where you want the cloned
   directory to be made.
 
-  6 type git clone, and then paste the URL 
+6 type git clone, and then paste the URL 
 
+ 7 All images of the git clone images are in the images folder [images can be found here](https://github.com/tomfinnegan/Memory-game/tree/master/images)
 ### Credits
 
 
