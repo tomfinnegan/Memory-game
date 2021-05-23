@@ -1,5 +1,3 @@
-
-
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard;
@@ -8,8 +6,6 @@ let firstCard, secondCard;
 let moves;
 let remainingCards = 12;
 let counter = document.querySelector(".moves");
-
-
 
 /** start new game **/
 
@@ -20,7 +16,7 @@ document.body.onload = resetGame();
 function flipCard() {
 
     if (lockBoard) return;
-    if ( this === firstCard) return;
+    if (this === firstCard) return;
 
     this.classList.add('flip');
 
@@ -44,33 +40,36 @@ function moveCounter() {
         minute = 0;
         hour = 0;
         startTimer();
-        }
+    }
 
-  
+
 }
 
 /** timer clock **/
 
-var second = 0, minute = 0; hour =0;
+var second = 0,
+    minute = 0;
+hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
+
 function startTimer() {
     interval = setInterval(function () {
-       if (remainingCards == 0) {
-           return;
-       }
-       timer.innerHTML = minute + "mins" + second + "secs";
-       second++;
-       if (second == 60) {
-           minute++;
-           second = 0;
-       } 
-           if (minute == 60) {
-               hour++;
-               minute = 0;
-           }
-        }, 1000);
-   }
+        if (remainingCards == 0) {
+            return;
+        }
+        timer.innerHTML = minute + "mins" + second + "secs";
+        second++;
+        if (second == 60) {
+            minute++;
+            second = 0;
+        }
+        if (minute == 60) {
+            hour++;
+            minute = 0;
+        }
+    }, 1000);
+}
 /** check for matching pair **/
 
 
@@ -86,7 +85,7 @@ function checkforMatch() {
 /** unclickable **/
 
 function disableCards() {
-    remainingCards -=2;
+    remainingCards -= 2;
 
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -103,7 +102,7 @@ function unflipCards() {
 
     lockBoard = true;
 
-    setTimeout (() => {
+    setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
@@ -119,7 +118,7 @@ function resetBoard() {
 }
 /** cards being shuffled into new position  **/
 
-function shuffle () {
+function shuffle() {
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
@@ -129,9 +128,9 @@ function shuffle () {
 /** well done modal **/
 
 function congratulations() {
-  
-    document.getElementById("popup1").classList.add("show");  
-         
+
+    document.getElementById("popup1").classList.add("show");
+
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = minute + "m " + second + "s ";
 }
@@ -171,10 +170,10 @@ function resetGame() {
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0 mins 0 secs";
     clearInterval(interval);
-    cards.forEach(card => card.addEventListener('click' ,flipCard));
+    cards.forEach(card => card.addEventListener('click', flipCard));
 }
 
-   // Get the modal
+// Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
@@ -184,19 +183,18 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function () {
+    modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
-
